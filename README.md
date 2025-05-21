@@ -14,7 +14,7 @@ Not real-time
 Single-modality
 
 We solved this by combining accessible webcam data with public EEG datasets to detect mental load in real time — without needing physical EEG equipment.
-
+************************
 💡 What We Built
 NeuroSense is a hybrid deep learning system that:
 
@@ -29,7 +29,7 @@ Processes EEG time-series data with an LSTM
 Combines both via a fusion model
 
 Classifies user mental load as Low, Medium, or High in real time
-
+**********************
 🔬 How We Did It
 1. Facial Expression Recognition
 
@@ -58,7 +58,7 @@ Applies a weighted decision rule to determine final output
 Final classification: Low / Medium / High
 
 Can be used for alerts, adaptive UI, or data logging
-
+**********************
 🛠️ Tools & Technologies
 Languages: Python
 
@@ -71,7 +71,7 @@ Datasets:
 DEAP Dataset
 
 SEED Dataset
-
+**********************
 📈 Visual Outputs
 Accuracy comparison (CNN vs LSTM vs Fusion)
 
@@ -82,7 +82,7 @@ Stacked bar chart (participant-wise load levels)
 Confusion matrix for performance evaluation
 
 All visuals are available in the /visuals folder.
-
+**********************
 📁 Project Structure
 
 NeuroSense/
@@ -95,7 +95,7 @@ NeuroSense/
 ├── requirements.txt     # Dependencies
 └── README.md            # Project documentation
 
-
+**********************
 🎯 Applications
 Education: Monitor student attention in online classes
 
@@ -104,7 +104,7 @@ Mental health: Detect fatigue, stress, or overload
 Productivity: Suggest breaks or content changes based on user state
 
 Research: Prototype for brain-computer interface systems
-
+**********************
 📚 References
 Koelstra et al. (2012). DEAP Dataset: Emotion Analysis Using Physiological Signals
 
@@ -117,11 +117,11 @@ LeCun et al. (2015). Deep Learning. Nature
 OpenCV Documentation – https://opencv.org
 
 Keras & TensorFlow – https://keras.io / https://www.tensorflow.org
-
+**********************
 👨‍💻 Authors
 Shahbaz Malik
 Shawn Lasrado
 Kritik Mahesh
-
+**********************
 Presented at the 10th AEIT International Student Research Colloquium (2025)
 Guided by Dr. Sundus Zehra, MAHE Dubai
