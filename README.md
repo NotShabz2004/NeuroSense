@@ -1,67 +1,70 @@
-NeuroSense – Real-Time Cognitive Load Detection System
-NeuroSense is an AI-driven system that detects a person’s cognitive load (mental effort) in real time by analyzing facial expressions via webcam and simulated EEG signals from well-known datasets. Our project addresses the growing issue of digital fatigue in education and remote work settings by enabling systems to become responsive to the user’s mental state.
+🧠 NeuroSense – Real-Time Cognitive Load Detection System
+
+NeuroSense is an AI-powered system that detects a person’s cognitive load (mental effort) in real time by analyzing facial expressions via webcam and simulated EEG signals. This project addresses the growing issue of digital fatigue in education and remote work by enabling systems to respond to a user’s mental state non-invasively.
 
 🧩 What Problem We Solved
-In today's digital-first world, prolonged screen time can cause mental overload, which affects focus, productivity, and overall well-being. Existing systems either:
+In today’s screen-heavy world, prolonged digital interaction can cause mental overload, reducing productivity and well-being. Existing solutions are often:
 
-Lack real-time responsiveness
+Intrusive (require EEG headsets)
 
-Rely on intrusive or expensive EEG hardware
+Expensive
 
-Don't combine multiple indicators of mental state
+Not real-time
 
-We built a non-invasive, AI-based solution that can assess mental effort live — using just a webcam and public datasets.
+Single-modality
+
+We solved this by combining accessible webcam data with public EEG datasets to detect mental load in real time — without needing physical EEG equipment.
 
 💡 What We Built
-NeuroSense is a hybrid machine learning system that:
+NeuroSense is a hybrid deep learning system that:
 
-Takes live facial video from a webcam
+Uses a webcam for facial expression tracking
 
-Uses EEG signals from public datasets (DEAP & SEED)
+Uses DEAP and SEED datasets to simulate EEG signals
 
-Analyzes both data types using deep learning
+Processes facial data with a CNN
 
-Fuses the results to detect real-time cognitive load (Low / Medium / High)
+Processes EEG time-series data with an LSTM
 
-It is designed to be:
+Combines both via a fusion model
 
-Real-time
-
-Scalable
-
-Affordable (no need for EEG headgear)
+Classifies user mental load as Low, Medium, or High in real time
 
 🔬 How We Did It
 1. Facial Expression Recognition
-Live webcam data captured using OpenCV
 
-Facial landmarks extracted and fed into a Convolutional Neural Network (CNN)
+Input: Webcam video stream
 
-CNN classifies cognitive load based on subtle expression patterns
+Processing: Facial landmarks extracted using OpenCV
 
-2. EEG Signal Classification
-We used DEAP and SEED datasets to simulate EEG input
+Classification: CNN model to estimate mental effort level
 
-Signals were preprocessed (filtered, normalized)
+2. EEG Signal Analysis
 
-Processed via a Long Short-Term Memory (LSTM) model to capture time-based patterns
+Input: Public datasets (DEAP and SEED)
+
+Processing: Signal normalization and segmentation
+
+Classification: LSTM model to predict load from temporal EEG patterns
 
 3. Fusion Layer
-We combined CNN and LSTM outputs using a weighted decision fusion strategy
 
-The final decision represents one of three cognitive load states
+Combines CNN and LSTM predictions
+
+Applies a weighted decision rule to determine final output
 
 4. Output
-The system gives a real-time result: Low, Medium, or High load
 
-Can be extended to adjust UI/UX based on user state
+Final classification: Low / Medium / High
+
+Can be used for alerts, adaptive UI, or data logging
 
 🛠️ Tools & Technologies
 Languages: Python
 
 Libraries: TensorFlow, Keras, OpenCV, NumPy, Matplotlib
 
-Models: CNN for spatial analysis, LSTM for time-series EEG
+Models: CNN (for facial data), LSTM (for EEG)
 
 Datasets:
 
@@ -70,57 +73,53 @@ DEAP Dataset
 SEED Dataset
 
 📈 Visual Outputs
-We created graphs to show:
+Accuracy comparison (CNN vs LSTM vs Fusion)
 
-Model accuracy comparison: CNN vs LSTM vs Fusion
+Line graph of cognitive load over time
 
-Confusion matrix for final predictions
+Stacked bar chart (participant-wise load levels)
 
-Real-time cognitive load trends (line graphs)
+Confusion matrix for performance evaluation
 
-Participant-wise load analysis (bar charts)
-
-(See /visuals folder)
+All visuals are available in the /visuals folder.
 
 📁 Project Structure
-webcam_module/ – Facial expression detection pipeline
 
-models/ – Training and evaluation of CNN & LSTM
-
-fusion/ – Decision strategy combining both outputs
-
-data/ – Preprocessed EEG data (simulated)
-
-visuals/ – All graphs and diagrams
-
-main.py – System entry point for testing and integration
-
-requirements.txt – Python dependencies
-
+NeuroSense/
+├── webcam_module/       # Facial detection code
+├── models/              # CNN & LSTM models
+├── fusion/              # Fusion logic
+├── data/                # EEG sample data
+├── visuals/             # Graphs and charts
+├── main.py              # Main script to run the system
+├── requirements.txt     # Dependencies
+└── README.md            # Project documentation
 🎯 Applications
-Online education – Track and adapt to student mental effort
+Education: Monitor student attention in online classes
 
-Mental health monitoring – Detect fatigue, burnout, or stress levels
+Mental health: Detect fatigue, stress, or overload
 
-Work-from-home productivity – Systems that know when you're losing focus
+Productivity: Suggest breaks or content changes based on user state
 
-Research and BCI – Early-stage brain-computer interaction framework
+Research: Prototype for brain-computer interface systems
 
 📚 References
-Koelstra et al., DEAP Dataset: Emotion Analysis Using Physiological Signals, IEEE (2012)
+Koelstra et al. (2012). DEAP Dataset: Emotion Analysis Using Physiological Signals
 
-Zheng & Lu, EEG-Based Emotion Classification Using Deep Learning, IEEE (2015)
+Zheng & Lu (2015). EEG-Based Emotion Classification Using Deep Learning
 
-Zhang et al., Multimodal Emotion Recognition with EEG and Eye Tracking (2017)
+Zhang et al. (2017). Multimodal Emotion Recognition Using EEG and Eye Tracking
 
-LeCun et al., Deep Learning, Nature (2015)
+LeCun et al. (2015). Deep Learning. Nature
 
-OpenCV, TensorFlow, and Keras Official Documentation
+OpenCV Documentation – https://opencv.org
 
-👨‍💻 Team
+Keras & TensorFlow – https://keras.io / https://www.tensorflow.org
+
+👨‍💻 Authors
 Shahbaz Malik
 Shawn Lasrado
 Kritik Mahesh
 
 Presented at the 10th AEIT International Student Research Colloquium (2025)
-Under the guidance of Dr. Sundus Zehra, MAHE Dubai
+Guided by Dr. Sundus Zehra, MAHE Dubai
