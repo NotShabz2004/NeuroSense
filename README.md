@@ -119,9 +119,7 @@ OpenCV Documentation – https://opencv.org
 Keras & TensorFlow – https://keras.io / https://www.tensorflow.org
 **********************
 👨‍💻 Authors
-Shahbaz Malik
-Shawn Lasrado
-Kritik Mahesh
+Shahbaz Malik | Shawn Lasrado | Kritik Mahesh
 **********************
 Presented at the 10th AEIT International Student Research Colloquium (2025)
 Guided by Dr. Sundus Zehra, MAHE Dubai
