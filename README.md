@@ -94,6 +94,8 @@ NeuroSense/
 ├── main.py              # Main script to run the system
 ├── requirements.txt     # Dependencies
 └── README.md            # Project documentation
+
+
 🎯 Applications
 Education: Monitor student attention in online classes
 
